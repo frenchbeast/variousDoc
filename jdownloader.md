@@ -100,3 +100,14 @@ $ chmod +x /etc/init.d/jdownloader
 $ systemctl enable jdownloader.service
 $ /etc/init.d/jdownloader start
 ```
+#### Mount your NAS automatically
+```bash
+$ mkdir /mnt/NASshare
+$ vi /etc/fstab
+# <file system> <dir>   <type>  <options>                       <dump>  <pass>
+/dev/mmcblk0p1  /boot   vfat    defaults                        0               2
+/dev/mmcblk0p2  /       ext4    defaults,noatime                0               1
+//192.168.1.10/NASshare  /mnt/NAS        cifs    username=<NAS username>,password=<NAS password>,iocharset=utf8       0       0
+
+$ mount /mnt/NASshare
+```
