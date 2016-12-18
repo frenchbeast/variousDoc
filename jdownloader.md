@@ -110,6 +110,8 @@ $ cd afpfs-ng
 $ ./configure && make && sudo make install && echo 'done!'
 ```
 
+> Not working on PINE64 yet
+
 #### Mount your NAS automatically
 ```bash
 $ mkdir /mnt/NASshare
