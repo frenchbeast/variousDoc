@@ -100,6 +100,16 @@ $ chmod +x /etc/init.d/jdownloader
 $ systemctl enable jdownloader.service
 $ /etc/init.d/jdownloader start
 ```
+
+#### Install afpfs-ng
+```bash
+$ apt-get install g++ libfuse-dev libreadline-dev libncurses5-dev git
+$ cd /usr/local
+$ git clone https://github.com/simonvetter/afpfs-ng
+$ cd afpfs-ng
+$ ./configure && make && sudo make install && echo 'done!'
+```
+
 #### Mount your NAS automatically
 ```bash
 $ mkdir /mnt/NASshare
