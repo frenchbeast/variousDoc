@@ -3,14 +3,25 @@
 #### Install Java
 
 ```bash
-# apt-get install -y openjdk-8-jdk
+$ apt-get install -y openjdk-8-jdk
 ```
 
 #### Install JDownloader2
 ```bash
-# mkdir /usr/local/JDownloader2
-# download the "Other" jar file
-# ...
+$ mkdir /usr/local/JDownloader2
+... >> download the "Other" jar file
+... >> from http://www.jdownloader.org/download/index
+... >> in /usr/local/JDownloader2
+$ java -jar /usr/local/JDownloader2/JDownloader.jar -config
+```
+
+#### Add your online account information
+```bash
+$ vi /usr/local/JDownloader2/cfg/org.jdownloader.api.myjdownloader.MyJDownloaderSettings.json
+{
+  "password" : "<your secret password>",
+  "email" : "<Your account email>"
+}
 ```
 
 #### Install the service
