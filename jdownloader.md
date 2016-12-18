@@ -13,13 +13,12 @@
 # ...
 ```
 
-#### Create a startup script
+#### Install the service
 ```bash
-# vi /etc/init.d/jdownloader
+$ vi /etc/init.d/jdownloader
 #! /bin/sh
 # /etc/init.d/jdownloader
-### BEGIN INIT INFO
-# Provides: jDownloader2
+### BEGIN INIT INFO$# Provides: jDownloader2
 # Required-Start: networking
 # Required-Stop:
 # Default-Start: 2 3 4 5
@@ -85,5 +84,7 @@ case "$1" in
 esac
 
 exit 0
-# /etc/init.d/jdownloader start
+$ chmod +x /etc/init.d/jdownloader
+$ systemctl enable jdownloader.service
+$ /etc/init.d/jdownloader start
 ```
