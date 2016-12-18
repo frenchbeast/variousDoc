@@ -20,7 +20,8 @@ $ java -jar /usr/local/JDownloader2/JDownloader.jar -config
 $ vi /usr/local/JDownloader2/cfg/org.jdownloader.api.myjdownloader.MyJDownloaderSettings.json
 {
   "password" : "<your secret password>",
-  "email" : "<Your account email>"
+  "email" : "<Your account email>",
+  "devicename" : "JDownloader@pine64"
 }
 ```
 
